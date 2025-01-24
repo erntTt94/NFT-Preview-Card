@@ -1,0 +1,153 @@
+:root {
+    --soft-blue: hsl(215, 51%, 70%);
+    --cyan: hsl(178, 100%, 50%);
+    --bg: hsl(217, 54%, 11%);
+    --card: hsl(216, 50%, 16%);
+    --line: hsl(215, 32%, 27%);
+    --white: hsl(0, 0%, 100%);
+    --fw-400: 400;
+    --fw-300: 300;
+    --fw-600: 600;
+}
+
+/* reset */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+    display: block;
+    max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+/* container-style */
+body {
+    font-family: "Outfit", serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: var(--bg);
+}
+
+.card {
+    padding: 1.7rem 1.7rem 2rem 1.7rem;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    max-width: 400px;
+    background-color: var(--card);
+}
+
+/* element-style */
+.card-img {
+    border-radius: 1rem;
+    z-index: 1;
+}
+
+.card-title {
+    color: var(--white);
+    opacity: 0.9;
+    font-size: 1.6rem;
+    font-weight: var(--fw-600);
+    margin-top: 0.5rem;
+}
+
+.card-subtitle {
+    color: hsla(215, 52%, 70%, 0.800);
+    font-size: 1.35rem;
+    font-weight: var(--fw-300);
+    margin-bottom: 0.5rem;
+}
+
+.card-crystal-con {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1.4px solid var(--line);
+    opacity: 0.9;
+    padding-bottom: 2rem;
+}
+
+.card-crystal,
+.card-crystal-time {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.card-crystal-value {
+    color: var(--cyan);
+    font-size: 1.2rem;
+    font-weight: var(--fw-600);
+}
+
+.card-crystal-timeleft {
+    color: var(--soft-blue);
+    font-size: 1.2rem;
+}
+
+.card-person-con {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    opacity: 0.9;
+}
+
+.card-person {
+    width: 2.4rem;
+    height: 2.4rem;
+    border: 1.4px solid var(--white);
+    border-radius: 50%;
+}
+
+.card-person-name {
+    font-size: 1.2rem;
+    color: var(--soft-blue);
+}
+
+.card-person-name span {
+    color: var(--white);
+    font-weight: var(--fw-400);
+}
+
+/* interactive */
+.card-person-name span:hover,
+.card-title:hover {
+    color: var(--cyan);
+    cursor: pointer;
+}
+
+.card-img:hover {
+    cursor: pointer;
+    opacity: 0.7;
+    filter: invert(80%) sepia(30%) saturate(700%) hue-rotate(130deg) brightness(80%) contrast(60%);
+    z-index: 0;
+}
+
+.card-interactive {
+    position: absolute;
+    place-self: center;
+    top: 27%;
+    height: 3.5rem;
+    width: 3.5rem;
+    z-index: 0;
+}
